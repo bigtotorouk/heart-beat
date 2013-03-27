@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="none"
+    android:clipToPadding="true"
+    android:background="@color/white">
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+	             
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/banner_color" >
+
+        <ImageView
+            android:id="@+id/detail_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:src="@drawable/previous" 
+            android:contentDescription="@string/image_description">
+        </ImageView>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/detail_back"
+            android:visibility="gone"
+            android:background="@color/line_color" />
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/l_detail" 
+            style="@style/text_font1"/>
+        <ImageView
+            android:id="@+id/detail_complete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/after"
+            android:contentDescription="@string/image_description"/>
+        <View
+            android:id="@+id/line1"
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/detail_complete"
+            android:background="@drawable/separator_line_v" />
+        <ImageView
+            android:id="@+id/detail_capture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/line1"
+            android:layout_centerVertical="true"
+            android:src="@drawable/capture"
+            android:contentDescription="@string/image_description">
+        </ImageView>
+		<View
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/detail_capture"
+            android:background="@drawable/separator_line_v" />
+    </RelativeLayout>
+    
+    <!-- <com.heart.beat.cn.widget.GalleryFlow xmlns:android="http://schemas.android.com/apk/res/android" 
+	    android:id="@+id/gallery"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="3dp"
+	/> -->
+	
+    <Gallery xmlns:android="http://schemas.android.com/apk/res/android" 
+	    android:id="@+id/gallery"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:spacing="-1.0dp"
+	    android:layout_marginTop="3dp"
+	/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pic_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+        <EditText android:id="@+id/product_title" 
+        	android:layout_width="fill_parent"
+         	android:layout_height="40dp"
+         	android:background="@drawable/ground_top"
+         	android:singleLine="true"
+         	android:inputType="text"
+         	android:hint="@string/l_beat_tilte"/>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+         	android:layout_height="@dimen/share_item"
+         	android:background="@drawable/ground_center">
+            <ImageView android:id="@+id/city_modify"
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginRight="8dp"
+            	android:layout_alignParentRight="true"
+            	android:layout_centerVertical="true"
+                android:src="@drawable/modify"
+                android:contentDescription="@string/image_description"/>
+            <EditText android:id="@+id/city"
+                android:layout_width="fill_parent"
+         		android:layout_height="fill_parent"
+         		android:layout_toLeftOf="@id/city_modify"
+         		android:singleLine="true"
+         		style="@style/share_item_font"
+         		android:inputType="text"
+         		android:hint="@string/l_beat_city"
+         		android:background="@drawable/transparent"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/add_place"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+         	android:layout_height="@dimen/share_item"
+         	android:gravity="center_vertical"
+         	android:background="@drawable/ground_center">
+            <ImageView android:id="@+id/add_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/share_add_location"
+                android:contentDescription="@string/image_description"/>
+            <TextView android:id="@+id/place_lable"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_toLeftOf="@id/add_location"
+		        android:layout_centerVertical="true"
+		        android:layout_marginRight="2dp"
+		        android:ellipsize="end" android:singleLine="true" 
+		        android:padding="4dp"
+		        style="@style/share_item_font"
+		        android:text="@string/l_place"/>
+            <ProgressBar
+                 android:id="@+id/bar1"
+                 style="@android:style/Widget.ProgressBar.Small.Inverse"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerInParent="true" 
+                 android:visibility="gone"/>
+            
+	        <!-- <Spinner android:id="@+id/product_place"  
+				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content" 
+				android:layout_toRightOf="@id/place_lable" 
+				android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true"/>  --> 
+		</RelativeLayout>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+         	android:layout_height="wrap_content"
+         	android:visibility="gone"
+         	android:background="@drawable/ground_center">
+            
+            <ImageView android:id="@+id/location_modify"
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_margin="1dp"
+            	android:layout_alignParentRight="true"
+            	android:layout_centerVertical="true"
+                android:src="@drawable/modify"
+                android:contentDescription="@string/image_description"/>
+            <EditText android:id="@+id/product_location"
+                android:layout_width="fill_parent"
+         		android:layout_height="40dp"
+         		android:layout_toLeftOf="@id/location_modify"
+         		android:singleLine="true"
+         		android:inputType="text"
+         		android:hint="@string/l_beat_location"
+         		android:background="@drawable/transparent"/>
+        </RelativeLayout>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layout_price"
+            android:layout_width="fill_parent"
+         	android:layout_height="wrap_content"
+         	android:gravity="center_vertical"
+         	android:background="@drawable/ground_center"
+         	android:visibility="gone">
+            <Spinner android:id="@+id/currency"
+                android:layout_width="wrap_content"
+            	android:layout_height="40dp"
+            	android:layout_alignParentRight="true"
+            	android:layout_centerVertical="true"
+            	
+                android:entries="@array/currency"/>
+            <EditText android:id="@+id/product_price"
+                android:layout_width="fill_parent"
+         		android:layout_height="40dp"
+         		android:layout_toLeftOf="@id/currency"
+         		android:singleLine="true"
+         		android:digits="1234567890."
+         		android:inputType="number"
+         		android:hint="@string/l_beat_price"
+         		android:background="@drawable/transparent"/>
+        </RelativeLayout>
+        <EditText android:id="@+id/product_decription" 
+        	android:layout_width="fill_parent"
+         	android:layout_height="75dp"
+         	android:lines="2"
+         	android:gravity="top"
+         	android:background="@drawable/ground_foot"
+         	android:hint="@string/l_beat_description"
+         	android:visibility="gone"/>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginBottom="5dp">
+        	<TextView android:id="@+id/add_decription"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:padding="4dp"
+		        style="@style/text_font3"
+		        android:text="@string/l_description"/>
+        	<View	android:id="@+id/spelling_001"
+	            android:layout_width="1dp"
+	            android:layout_height="15dp"
+	            android:layout_centerVertical="true"
+	            android:layout_toLeftOf="@id/add_decription"
+	            android:background="@color/line_color" />
+             <TextView android:id="@+id/add_price"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_toLeftOf="@id/spelling_001"
+		        android:padding="4dp"
+		        style="@style/text_font3"
+		        android:text="@string/l_price1"/>
+
+
+             
+        </RelativeLayout>
+        
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        	android:layout_width="fill_parent"
+        	android:layout_height="40dp"
+        	android:paddingLeft="4dp"
+        	android:paddingRight="4dp"
+        	android:background="@drawable/ground_top">
+        	<CheckBox android:id="@+id/facebook_selected"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_alignParentRight="true"
+        	    android:layout_centerVertical="true"
+        	    android:clickable="true"
+        	    android:checked="false"/>
+            <TextView  android:layout_width="fill_parent"
+        	    android:layout_height="wrap_content"
+        	    android:layout_toLeftOf="@id/facebook_selected"
+        	    android:layout_centerVertical="true"
+        	    android:gravity="center"
+        	    style="@style/text_font3"
+        	    android:text="@string/l_facebook"
+        	    />
+        </RelativeLayout>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        	android:layout_width="fill_parent"
+        	android:layout_height="40dp"
+        	android:paddingLeft="4dp"
+        	android:paddingRight="4dp"
+        	android:background="@drawable/ground_center">
+        	<CheckBox android:id="@+id/google_selected"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_alignParentRight="true"
+        	    android:layout_centerVertical="true"
+        	    android:clickable="true"
+        	    android:checked="false"/>
+            <TextView  android:layout_width="fill_parent"
+        	    android:layout_height="wrap_content"
+        	    android:layout_toLeftOf="@id/google_selected"
+        	    android:layout_centerVertical="true"
+        	    android:gravity="center"
+        	    style="@style/text_font3"
+        	    android:text="@string/l_google"
+        	    />
+        </RelativeLayout>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        	android:layout_width="fill_parent"
+        	android:layout_height="40dp"
+        	android:paddingLeft="4dp"
+        	android:paddingRight="4dp"
+        	android:background="@drawable/ground_foot">
+        	<CheckBox android:id="@+id/twitter_selected"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_alignParentRight="true"
+        	    android:layout_centerVertical="true"
+        	    android:clickable="true"
+        	    android:checked="false"/>
+            <TextView  android:layout_width="fill_parent"
+        	    android:layout_height="wrap_content"
+        	    android:layout_toLeftOf="@id/twitter_selected"
+        	    android:layout_centerVertical="true"
+        	    android:gravity="center"
+        	    style="@style/text_font3"
+        	    android:text="@string/l_twitter"
+        	    />
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+
+  <!--   <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pic_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/share_title"
+                android:layout_width="wrap_content"
+	         	android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="title" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/share_title" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/share_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="price" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/share_price" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/share_descript"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="description" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout> -->
+
+</LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/grid_item_size"
+    android:layout_height="@dimen/grid_item_size"
+    android:layout_gravity="center"
+    android:background="@drawable/border_1bg">
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="@dimen/grid_item_size"
+        android:layout_height="@dimen/grid_item_size" 
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/grid_item_image"
+            android:padding="1dp"
+            android:layout_width="@dimen/grid_item_size"
+            android:layout_height="@dimen/grid_item_size"
+            android:contentDescription="@string/image_description" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/image_layout"
+        android:layout_alignLeft="@id/image_layout"
+        android:layout_alignRight="@id/image_layout"
+        android:gravity="right"
+        android:background="#64000000">
+
+        <TextView
+            android:id="@+id/grid_item_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="10"
+            android:textSize="12sp" 
+            android:background="@drawable/map_counter"/>
+
+        <TextView
+            android:id="@+id/item_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100km"
+            android:visibility="gone"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

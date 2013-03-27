@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- the detail of the beat -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back_bj"
+    android:orientation="vertical" >
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:background="@color/banner_color">
+        <ImageView android:id="@+id/back" 
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:src="@drawable/back"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/image_description"/>
+        
+         <View android:id="@+id/divide1" android:layout_width="1dp" android:layout_height="fill_parent" android:layout_toRightOf="@id/back" android:background="#304755" android:visibility="invisible"/>
+         <TextView android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_toRightOf="@id/divide1"
+             android:layout_centerHorizontal="true"
+             android:gravity="center"
+             android:textColor="#ffffff"
+             android:textSize="24sp"
+             android:text="@string/l_detail"/>
+    </RelativeLayout>
+	<ListView android:id="@+id/comments"
+		     android:layout_width="fill_parent"
+		     android:layout_height="0.0dp"
+		     android:layout_weight="1.0"
+		     android:paddingLeft="2dp"
+		     android:paddingRight="2dp"
+		     style="@style/info_listbg"
+		     android:divider="@drawable/dashedline">
+		     
+	</ListView>
+	 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	     	android:id="@+id/comments_layout"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/ground_center"
+		    android:paddingTop="4dp"
+		    android:paddingBottom="4dp"
+		    android:visibility="gone">
+         <TextView android:id="@+id/comment_submit"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_alignParentRight="true"
+             android:layout_margin="3dp"
+             android:gravity="center"
+             android:textColor="@color/white"
+             android:background="@drawable/send"
+             android:text="@string/l_send"/>
+        <EditText android:id="@+id/editcomment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_toLeftOf="@id/comment_submit"
+            android:layout_centerVertical="true"
+            
+            android:hint="@string/l_commenthint"/>
+        
+	</RelativeLayout>
+</LinearLayout>

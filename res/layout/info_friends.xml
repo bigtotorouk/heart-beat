@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back_bj"
+    android:orientation="vertical" >
+     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.heart.beat.cn.widget.XListView android:id="@+id/info_friend_list"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        style="@style/info_listbg"
+        />
+        <ImageView android:id="@+id/top_still"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/top_still"
+            android:visibility="invisible"
+            />
+    </FrameLayout>
+
+</LinearLayout>

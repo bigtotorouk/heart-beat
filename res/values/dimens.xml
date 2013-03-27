@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="grid_item_size">75dp</dimen>
+    <dimen name="bottom_tab_padding_drawable">2.0dip</dimen>
+    <dimen name="bottom_tab_padding_up">5.0dip</dimen>
+    <dimen name="bottom_tab_font_size">10.0dip</dimen>
+    <dimen name="avatar_50">50.0dip</dimen>
+    <dimen name="avatar_90">90.0dip</dimen>
+    <dimen name="share_item">40dip</dimen>
+    <dimen name="banner_height">48dip</dimen>
+
+</resources>

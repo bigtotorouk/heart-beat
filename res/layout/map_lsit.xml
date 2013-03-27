@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/bar1"
+        style="@android:style/Widget.ProgressBar.Small.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:background="@color/banner_color">
+        <ImageView android:id="@id/back" 
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:src="@drawable/back"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:contentDescription="@string/image_description"/>
+        
+         <View android:id="@+id/divide1" android:layout_width="1dp" android:layout_height="fill_parent" android:layout_toRightOf="@id/back" android:background="#304755" android:visibility="invisible"/>
+         <TextView android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_toRightOf="@id/divide1"
+             android:layout_centerHorizontal="true"
+             android:gravity="center"
+             android:textColor="#ffffff"
+             android:textSize="24sp"
+             android:text="@string/l_maplist"/>
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="2dp"
+        android:gravity="center_horizontal"
+        android:fadingEdge="none"
+        android:horizontalSpacing="3.0dip" 
+        android:verticalSpacing="3.0dip" 
+        android:listSelector="#00000000"
+        android:columnWidth="70dp"
+        android:stretchMode="columnWidth"
+        android:background="#cfcfcf"
+        android:numColumns="4">
+	</GridView>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        style="@style/info_listbg"
+        android:visibility="gone"/>
+   
+</LinearLayout>

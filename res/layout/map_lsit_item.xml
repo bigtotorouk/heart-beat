@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp">
+    <TextView android:id="@+id/place_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/font_color1"
+        android:textSize="18sp"
+        android:gravity="left"/>
+    <TextView android:id="@+id/place_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/place_name"
+        android:drawableLeft="@drawable/location"
+        android:textColor="@color/font_color1"
+		android:gravity="left"/>
+    
+    <ImageView android:id="@+id/place_image"
+        android:layout_width="130dp"
+		android:layout_height="130dp"
+	    android:layout_below="@id/place_location"
+		android:layout_margin="10dp"
+		android:layout_centerHorizontal="true"
+	    android:src="@drawable/border_1bg"
+	    android:scaleType="fitCenter"
+	    android:background="@drawable/default_icon"
+		android:contentDescription="@string/image_description"/>
+   
+    <TextView android:id="@+id/people_l"
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="2dp"
+		android:layout_below="@id/place_image"
+		android:text="@string/l_people"/>
+    <TextView android:id="@+id/place_beats"
+    	android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/people_l"
+		android:layout_alignTop="@id/people_l"
+	    />
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 比如profile-layou 中 shares的tab里现实beat的列表，这个稍微和beat_item有些不同 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_bj">
+    <ImageView android:id="@+id/item_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/border_2bg"
+        android:layout_alignParentLeft="true"/>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/spanner1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/item_image"
+	    android:layout_alignTop="@id/item_image"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal"
+	    android:layout_margin="2dp">
+	    <TextView android:id="@+id/item_author"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="left"
+	        android:textSize="18sp"
+	        android:textColor="#808080"/>
+	    <TextView android:id="@+id/item_time"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:textColor="#939393"
+	        android:gravity="right"/>
+	</LinearLayout>
+	<TextView android:id="@+id/item_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/item_image"
+	        android:layout_margin="2dp"
+	        android:layout_below="@id/spanner1"
+	        android:textSize="14sp"
+	        android:textColor="#939393">
+	    
+	</TextView>
+	<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_image"
+        android:layout_alignBottom="@id/item_image"
+        android:gravity="bottom"
+        android:layout_below="@id/item_title"
+        android:layout_margin="2dp">
+
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/sign_pound"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="4dp"
+            android:textColor="#808080"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_applaud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/item_price"
+            android:drawableLeft="@drawable/applaud_normal"
+            android:drawablePadding="4dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/item_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/item_applaud"
+            android:drawableLeft="@drawable/comment_normal"
+            android:drawablePadding="4dp"
+            android:gravity="center" />
+    </RelativeLayout>
+
+</RelativeLayout>

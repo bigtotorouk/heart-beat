@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back_bj"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/banner_color" >
+        
+        <TextView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            style="@style/text_font4"
+            android:layout_margin="2dp"
+            android:background="@drawable/setting"/>
+        <View android:id="@+id/spelling"
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/setting"
+            android:background="@drawable/separator_line_v"
+            android:visibility="gone"/>
+        
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/spelling"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/l_profile"
+            style="@style/text_font1"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profile_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/profile_banner">
+
+        <ImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="@dimen/avatar_90"
+            android:layout_height="@dimen/avatar_90"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="2dp"
+            android:background="@drawable/photo"
+            android:src="@drawable/border_2bg"
+            android:contentDescription="@string/image_description"/>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/follow_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="1dp"
+            android:layout_alignBottom="@id/profile_photo"
+            android:layout_toRightOf="@id/profile_photo"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/text_font3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/l_attention" />
+
+            <TextView
+                android:id="@+id/follow"
+                style="@style/text_font3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/light_green"
+                android:text="@string/attention" />
+        </RelativeLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="1dp"
+            android:layout_alignBottom="@id/profile_photo"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_alignTop="@id/profile_photo"
+            android:layout_toRightOf="@id/profile_photo"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+			<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="2"
+	            android:gravity="center_vertical">
+			    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		            android:layout_width="wrap_content"
+		            android:layout_height="fill_parent"
+		            android:layout_gravity="left"
+		            android:orientation="vertical">
+				    <TextView
+		                android:id="@+id/nicker"
+		                style="@style/text_font3"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="1"
+		                android:gravity="left"
+		                android:text="@string/l_nicker"
+		                android:textColor="#505050" />
+					<TextView
+		                android:id="@+id/city"
+		                style="@style/text_font3"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="1"
+		                android:gravity="left"
+		                android:text="@string/l_city"
+		                android:textColor="#505050" />
+				</LinearLayout>
+				<Button android:id="@+id/attent"
+				     android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:paddingLeft="2dp"
+	                android:paddingRight="2dp"
+	                android:layout_gravity="right"
+	                android:layout_marginRight="10dp"
+	                android:background="@drawable/btn_sign"
+	                android:text="@string/attention"
+	                android:textSize="16sp"/>
+			</LinearLayout> -->
+			<TextView
+                android:id="@+id/nicker"
+                style="@style/text_font3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/l_nicker"
+                android:textColor="#505050" />
+
+            <TextView
+                android:id="@+id/city"
+                style="@style/text_font3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/l_city"
+                android:textColor="#505050" />
+            <TextView
+                android:id="@+id/email"
+                style="@style/text_font3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/l_email"
+                android:textColor="#505050" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+		<RadioGroup android:id="@+id/tab_show"
+		    android:layout_width="fill_parent"
+		    android:layout_height="38dp"
+		    android:orientation="horizontal">
+		    <RadioButton android:id="@+id/show_shares"
+		        android:text="@string/l_shares"
+		        android:checked="true"
+                style="@style/show_btn"/>
+		    <RadioButton android:id="@+id/show_friends"
+		        android:text="@string/l_friends"
+                style="@style/show_btn"/>
+		    <RadioButton android:id="@+id/show_attention"
+		        android:text="@string/l_attention"
+                style="@style/show_btn"/>
+		</RadioGroup>
+
+        <!-- <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#BFBFBF">
+
+            <ImageView android:id="@+id/btn_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/switch_to_list"
+                android:contentDescription="@string/image_description"/>
+            
+              <Button
+                android:id="@+id/show_shares"
+                android:text="@string/l_shares"
+                style="@style/show_btn"/>
+            <Button
+                android:id="@+id/show_friends"
+                android:text="@string/l_friends"
+                style="@style/show_btn"/>
+
+            <Button 
+           		android:id="@+id/show_attent1"
+           		android:text="@string/l_attention"       	
+                style="@style/show_btn"/>
+        </LinearLayout> -->
+        <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ListView
+                android:id="@+id/profile_beat_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                style="@style/info_listbg" >
+            </ListView>
+
+            <GridView
+                android:id="@+id/grid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone" >
+            </GridView>
+        </FrameLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

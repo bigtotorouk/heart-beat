@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+	
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_topbar" >
+
+        <ImageView
+            android:id="@+id/detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/previous" >
+        </ImageView>
+		<View
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/detail_back"
+            android:background="@color/line_color" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Detail" 
+            style="@style/text_font1"/>
+        <ImageView
+            android:id="@+id/detail_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/after"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/detail_complete"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+    
+    <ImageView android:id="@+id/product_photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/default_photo"
+        />
+</LinearLayout>

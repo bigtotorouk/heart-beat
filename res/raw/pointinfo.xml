@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pointinfos>
+
+    <pointinfo
+        lat="31.28265730"
+        lon="121.4208978"
+        snippt="i am x1"
+        title="x1"
+        type="0" >
+    </pointinfo>
+    <!-- <pointinfo
+        lat="220"
+        lon="50"
+        snippt="i am x2"
+        title="x2"
+        type="0" >
+    </pointinfo>
+    <pointinfo
+        lat="885"
+        lon="400"
+        snippt="i am x3"
+        title="x3"
+        type="1" >
+    </pointinfo>
+    <pointinfo
+        lat="220"
+        lon="100"
+        snippt="i am x4"
+        title="x4"
+        type="1" >
+    </pointinfo>
+    <pointinfo
+        lat="500"
+        lon="500"
+        snippt="i am x5"
+        title="x5"
+        type="0" >
+    </pointinfo>
+    <pointinfo
+        lat="320"
+        lon="50"
+        snippt="i am x6"
+        title="x6"
+        type="2" >
+    </pointinfo>
+    <pointinfo
+        lat="480"
+        lon="60"
+        snippt="i am x7"
+        title="x7"
+        type="1" >
+    </pointinfo>
+    <pointinfo
+        lat="220"
+        lon="10"
+        snippt="i am x8"
+        title="x8"
+        type="1" >
+    </pointinfo>
+    <pointinfo
+        lat="110"
+        lon="10"
+        snippt="i am x9"
+        title="x9"
+        type="2" >
+    </pointinfo>
+    <pointinfo
+        lat="385"
+        lon="30"
+        snippt="i am x10"
+        title="x10"
+        type="1" >
+    </pointinfo>
+    <pointinfo
+        lat="400"
+        lon="200"
+        snippt="i am x11"
+        title="x11"
+        type="2" >
+    </pointinfo>
+    <pointinfo
+        lat="125"
+        lon="125"
+        snippt="i am x12"
+        title="x12"
+        type="1" >
+    </pointinfo>
+    <pointinfo
+        lat="180"
+        lon="360"
+        snippt="i am x13"
+        title="x13"
+        type="0" >
+    </pointinfo>
+    <pointinfo
+        lat="220"
+        lon="330"
+        snippt="i am x14"
+        title="x14"
+        type="1" >
+    </pointinfo> -->
+
+</pointinfos>

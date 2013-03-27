@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 其实这个布局文件有两个地方用。一个是作为place-listview的headView，另外就是作为place-listview的item布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_place"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/banner_height"
+    android:layout_below="@id/banner"
+    android:gravity="center_vertical" >
+
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/add" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/item_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end" android:singleLine="true" 
+            android:text="Add new place"
+            android:textColor="#1a1a1a"
+            android:textSize="18sp" />
+
+        <TextView android:id="@+id/item_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You can add a new place for this beat"
+            android:ellipsize="end" android:singleLine="true" 
+            android:textColor="#4f4f4f"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

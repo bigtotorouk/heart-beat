@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0" >
+
+    <Response>
+        <name>
+31.1990739,121.3830649
+        </name>
+
+        <Status>
+            <code>
+200
+            </code>
+
+            <request>
+geocode
+            </request>
+        </Status>
+
+        <Placemark id="p1" >
+            <address>
+1981号 Hongqiao Rd, Changning, Shanghai, China
+            </address>
+
+            <AddressDetails
+                Accuracy="8"
+                xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" >
+                <Country>
+                    <CountryNameCode>
+CN
+                    </CountryNameCode>
+
+                    <CountryName>
+中国
+                    </CountryName>
+
+                    <AdministrativeArea>
+                        <AdministrativeAreaName>
+上海市
+                        </AdministrativeAreaName>
+
+                        <Locality>
+                            <LocalityName>
+上海市
+                            </LocalityName>
+
+                            <DependentLocality>
+                                <DependentLocalityName>
+长宁区
+                                </DependentLocalityName>
+
+                                <Thoroughfare>
+                                    <ThoroughfareName>
+虹桥路1981号
+                                    </ThoroughfareName>
+                                </Thoroughfare>
+                            </DependentLocality>
+                        </Locality>
+                    </AdministrativeArea>
+                </Country>
+            </AddressDetails>
+
+            <ExtendedData>
+                <LatLonBox
+                    east="121.3855346"
+                    north="31.1985702"
+                    south="31.1958722"
+                    west="121.3828366" />
+            </ExtendedData>
+
+            <Point>
+                <coordinates>
+121.3841856,31.1972212,0
+                </coordinates>
+            </Point>
+        </Placemark>
+    </Response>
+
+</kml>

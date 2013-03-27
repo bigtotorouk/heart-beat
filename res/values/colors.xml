@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_white">#F4F1F1</color>
+    <color name="line_color">#404040</color>
+    <color name="bg_blue1">#3B9FBF</color>
+
+    <drawable name="light_green">#99CC33</drawable>
+    <drawable name="bg_topbar">#385a76</drawable>
+    <drawable name="light_gray">#606060</drawable>
+    <drawable name="list_line">#d7d7d7</drawable>
+    
+    <color name="font_color1">#888888</color>
+    <color name="banner_color">#0075d4</color>
+
+    <!-- list-item color -->
+    <color name="beat_title_text">#a1bbce</color>
+    <color name="beat_text">#080808</color>
+    
+    <!-- beat-detail layout -->
+    <color name="beat_detail_bg">#e6e6e6</color>
+    <color name="comment_bar_bg">#ADD8E6</color>
+    
+    <!-- show btn text -->
+    <color name="show_txt_selected">#005fa2</color>
+    <color name="show_txt_normal">#424242</color>
+</resources>
